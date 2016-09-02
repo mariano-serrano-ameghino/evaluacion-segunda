@@ -46,4 +46,6 @@ public class CuadradoTest {
 
         Assert.assertEquals(113, cuadrado1.sumarAreasDeCuadrados(cuadrados), 0);
     }
+
 }
+

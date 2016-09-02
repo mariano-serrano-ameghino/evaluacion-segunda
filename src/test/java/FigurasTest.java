@@ -36,4 +36,5 @@ public class FigurasTest{
 
         Assert.assertEquals(1331, cuadrado.sumarAreasDeFiguras(figuras),10);
     }
+
 }

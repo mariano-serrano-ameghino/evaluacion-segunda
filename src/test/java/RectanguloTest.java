@@ -2,7 +2,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -51,6 +50,16 @@ public class RectanguloTest {
 
         Assert.assertEquals(316, c.sumarAreasDeFiguras(rectangulos),0);
     }
+/*
+    @Test
+    public void Rectangulo (){
+        Rectangulo r1 = new Rectangulo (3,2);
+        Rectangulo r2 = new Rectangulo (5,8);
 
+        Assert.assertEquals(r1.toString(), " Rectangulo: Altura = 3");
+        Assert.assertEquals(r2.toString(), " Rectangulo: Altura = 5");
+
+    }
+*/
 
 }

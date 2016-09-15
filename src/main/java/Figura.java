@@ -1,26 +1,14 @@
-import java.util.List;
-
 /**
  * Created by alumno on 02/09/16.
  */
-public class Figura {
-    int base;
-    int altura;
-    int radio;
+public interface Figura {
+    public double area();
 
-    public double area() {
-        return (2*(this.base + this.altura));
-    }
+    public double perimetro();
 
-    public double perimetro() {
-        return (Math.PI * this.radio);
-    }
+    public double sumarAreasDeFiguras();
 
-    public double sumarAreasDeFiguras(List<Figura> figuras) {
-        double sumarAreas=0;
-        for (Figura f : figuras){
-            sumarAreas= sumarAreas + f.area();
-        }
-        return sumarAreas;
-    }
+    public boolean compararAreasTotal(Figura fig);
+
+    public boolean compararPerimetros(Figura f2);
 }

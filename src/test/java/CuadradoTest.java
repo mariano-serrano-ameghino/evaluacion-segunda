@@ -1,7 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -45,6 +44,26 @@ public class CuadradoTest {
         List<Cuadrado> cuadrados = Arrays.asList(cuadrado1,cuadrado2,cuadrado3);
 
         Assert.assertEquals(113, cuadrado1.sumarAreasDeCuadrados(cuadrados), 0);
+    }
+
+    @Test
+    public void compararAreasDeCuadrados(){
+        Cuadrado cuadrado2 = new Cuadrado(2);
+        Cuadrado cuadrado3 = new Cuadrado(10);
+
+        boolean resultadoCompararAreas = cuadrado2.compararAreas(cuadrado3);
+
+        Assert.assertFalse(resultadoCompararAreas);
+    }
+
+    @Test
+    public void compararPerimetrosCuadrados(){
+        Cuadrado c1 = new Cuadrado(5);
+        Cuadrado c2 = new Cuadrado(10);
+
+        boolean resu = c1.compararPerimetrosCuadrados(c2);
+
+        Assert.assertTrue(resu);
     }
 
 }

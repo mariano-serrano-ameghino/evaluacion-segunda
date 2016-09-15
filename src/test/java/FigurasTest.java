@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,9 +32,41 @@ public class FigurasTest{
         Figura fig2 = new Rectangulo(5,10);
         Figura fig3 = new Circulo(20);
 
-        List<Figura> figuras = Arrays.asList(fig,fig2,fig3);
+        List<Figura> figuras = new ArrayList<Figura>();
+        figuras.add(fig);
+        figuras.add(fig2);
+        figuras.add(fig3);
 
         Assert.assertEquals(1331, cuadrado.sumarAreasDeFiguras(figuras),10);
     }
+
+    @Test
+    public void calcularAreasTotal(){
+        Figura fig  = new Cuadrado(5);
+        Figura fig2 = new Rectangulo(5,10);
+
+        boolean resultado = fig.compararAreasTotal(fig2);
+
+        Assert.assertFalse(resultado);
+    }
+
+    @Test
+    public void cuadradoToString() {
+        Cuadrado cuadrado  = new Cuadrado(5);
+        Cuadrado cuadrado2  = new Cuadrado(10);
+
+        Assert.assertEquals(cuadrado.toString() , "Cuadrado: lado = 5");
+        Assert.assertEquals(cuadrado2.toString() , "Cuadrado: lado = 10");
+    }
+
+    @Test
+    public void compararPerimetros() {
+        Figura f1= new Cuadrado(5);
+        Figura f2= new Circulo(10);
+        boolean res=f1.compararPerimetros(f2);
+
+        Assert.assertFalse(res);
+    }
+
 
 }

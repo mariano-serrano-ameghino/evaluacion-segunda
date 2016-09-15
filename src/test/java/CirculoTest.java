@@ -24,5 +24,15 @@ public class CirculoTest {
         Assert.assertEquals((Math.PI*10) , circulo.perimetro(),0);
     }
 
+    @Test
+    public void Circulo(){
+        Circulo c1 = new Circulo(5);
+        Circulo c2 = new Circulo(10);
+
+        Assert.assertEquals(c1.toString(), "circulo: radio = 5.0");
+    }
+
+
+
 }
 
